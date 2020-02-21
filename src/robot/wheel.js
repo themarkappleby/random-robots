@@ -1,7 +1,6 @@
 /* global rand */
 
 import * as THREE from 'three'
-import * as CANNON from 'cannon'
 
 export default (colour) => {
   const radius = rand(0.1, 0.6)
@@ -21,13 +20,6 @@ export default (colour) => {
   tire.receiveShadow = true
   tire.castShadow = true
   tire.name = 'Tire'
-  tire.physics = new CANNON.Body({
-    shape: new CANNON.Cylinder(radius, radius, thickness, 32),
-    mass: 30,
-    velocity: new CANNON.Vec3(5, 5, 5)
-  })
-  // tire.physics.position.copy(tire.position)
-  // tire.physics.quaternion.copy(tire.quaternion)
   wheel.add(tire)
 
   // Create axle

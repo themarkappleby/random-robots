@@ -26,18 +26,19 @@ export default function Robot (x = 0, y = 0, z = 0) {
   })
 
   // Position specific part at bottom left on front face for testing
+  /*
   var testPart = Wheel(colour)
   testPart.position.set(...jointMatrix.front.vertices[0][0])
   testPart.rotation.set(...jointMatrix.front.rotation)
   robot.add(testPart)
+  */
 
-  /*
   var parts = [Wheel]
   Object.keys(decals).forEach(key => {
     parts.push(decals[key])
   })
 
-  var randomJoints = getRandomJoints(jointMatrix, rand(1, 3, true))
+  var randomJoints = getRandomJoints(jointMatrix, rand(1, 5, true))
   randomJoints.forEach(joint => {
     var partFactory = rand(parts)
     var part = partFactory(colour)
@@ -45,7 +46,6 @@ export default function Robot (x = 0, y = 0, z = 0) {
     part.rotation.set(...joint.rotation)
     robot.add(part)
   })
-  */
 
   robot.position.set(x, y, z)
 
