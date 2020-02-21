@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Mark Appleby - Creative Developer</title>
+    <!--
+    <link href="https://fonts.googleapis.com/css?family=Lato|Libre+Baskerville&display=swap" rel="stylesheet">
+    -->
+    <link rel="stylesheet" href="src/styles.css">
+    <script>
+      window.debug = true;
+      function rand (min, max, whole) {
+        if (Array.isArray(min)) {
+          var index = rand(0, min.length, true)
+          return min[index]
+        } else if (whole) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        } else {
+          return Math.random() * (max - min) + min;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <!--
+    <div class="container">
+      <div class="content">
+        <h1>Mark Appleby</h1>
+        <h2>Creative Developer</h2>
+      </div>
+    </div>
+    -->
+    <script type="text/javascript" src="dist/main.js"></script>
+  </body>
+</html>
